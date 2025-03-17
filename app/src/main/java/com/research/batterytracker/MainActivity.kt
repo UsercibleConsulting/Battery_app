@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope by MainScope() {
     companion object {
         private const val TAG = "MainActivity"
         private const val RC_SIGN_IN = 9001
-        private const val DEFAULT_SHEET_ID = "YOUR_DEFAULT_SHEET_ID" // Replace with your default sheet ID
+        private const val DEFAULT_SHEET_ID = "1Gw4zmwhbFNBTQDSjoYsyoGbIFP5LCzFL6MeT4Fyeuzk" // Google Sheet ID
     }
     
     private lateinit var signInButton: SignInButton
