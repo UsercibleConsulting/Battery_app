@@ -56,6 +56,13 @@ object DeviceUtils {
     fun getAccessToken(context: Context): String? {
         return getPreferences(context).getString(KEY_ACCESS_TOKEN, null)
     }
+    
+    /**
+     * Clear authentication data - useful for troubleshooting sign-in issues
+     */
+    fun clearAuthData(context: Context) {
+        getPreferences(context).edit().remove(KEY_ACCESS_TOKEN).apply()
+    }
 
     /**
      * Get the SharedPreferences instance

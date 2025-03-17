@@ -26,6 +26,17 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    packagingOptions {
+        exclude "META-INF/DEPENDENCIES"
+        exclude "META-INF/LICENSE"
+        exclude "META-INF/LICENSE.txt"
+        exclude "META-INF/license.txt"
+        exclude "META-INF/NOTICE"
+        exclude "META-INF/NOTICE.txt"
+        exclude "META-INF/notice.txt"
+        exclude "META-INF/ASL2.0"
+        exclude "META-INF/*.kotlin_module"
+    }
 }
 
 dependencies {
@@ -35,14 +46,21 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     
     // Google Sign-In and Google Sheets API
-    implementation 'com.google.android.gms:play-services-auth:20.5.0'
-    implementation 'com.google.api-client:google-api-client-android:1.33.0'
-    implementation 'com.google.apis:google-api-services-sheets:v4-rev20220927-1.30.10'
+    implementation 'com.google.android.gms:play-services-auth:20.4.1'
+    implementation 'com.google.api-client:google-api-client-android:2.0.0'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.34.1'
+    implementation 'com.google.apis:google-api-services-sheets:v4-rev20220927-2.0.0'
     implementation 'com.google.auth:google-auth-library-oauth2-http:1.11.0'
     implementation 'com.google.guava:guava:31.1-android'
     
+    // Http client
+    implementation 'com.google.http-client:google-http-client-android:1.42.3'
+    implementation 'com.google.http-client:google-http-client-gson:1.42.3'
+    implementation 'com.google.http-client:google-http-client-jackson2:1.42.3'
+    
     // Coroutines for asynchronous operations
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
     
     // Testing
     testImplementation 'junit:junit:4.13.2'
